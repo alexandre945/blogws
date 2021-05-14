@@ -1,3 +1,21 @@
 body {
-    background-color: blue;
+    background-color: dimgray;
+}
+#center {
+    align-items: center;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.cadastro{
+    background-color: rgba(128, 128, 128, 0.938);
+}
+
+.login{
+    background-color: rgba(128, 128, 128, 0.938);
+}
+input {
+    background-color: rgba(135, 206, 250, 0.336);
+}
+button {
+    background-color: rgba(135, 206, 250, 0.336);   
 }
