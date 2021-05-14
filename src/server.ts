@@ -13,13 +13,8 @@ app.set('view engine',  'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
 
-
 //habilitar arquivos statics
-app.use(express.static(__dirname + "/public"))
-
-    app.use(express.static(
-    path.resolve(__dirname, '..', '/public')))
-
+app.use(express.static("public"))
 
 // usar o req.body
 app.use(express.urlencoded({ extended: true }))
