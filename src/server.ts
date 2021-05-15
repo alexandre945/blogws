@@ -1,5 +1,5 @@
 // import { http } from "./http";
-import express, { application } from "express";
+import express; { application } from "express";
 import { createServer} from "http";
 import { Server,Socket } from "socket.io";
 import path from "path";
@@ -31,6 +31,7 @@ const io = new Server(http);//criando protocolo ws
  io.on("connection",(socket ) => {
      console.log("se conectou,socket.id");
 });
+
 
 http.listen(8080,() => {
     console.log(' sevidor rodando na url  localhost:8080');
