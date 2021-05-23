@@ -4,7 +4,7 @@
    "port": 3306,
    "username": "xandy",
    "password": "test",
-   "database": "test",
+   "database": "blog",
    "synchronize": true,
    "logging": false,
    "entities": [
