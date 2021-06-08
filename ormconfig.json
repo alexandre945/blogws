@@ -2,9 +2,9 @@
    "type": "mysql",
    "host": "localhost",
    "port": 3306,
-   "username": "xandy",
-   "password": "test",
-   "database": "blog",
+   "username": "",
+   "password": "",
+   "database": "userblog",
    "synchronize": true,
    "logging": false,
    "entities": [

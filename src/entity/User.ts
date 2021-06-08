@@ -5,9 +5,14 @@ import {Entity, PrimaryGeneratedColumn, Column,UpdateDateColumn} from "typeorm";
 
     @PrimaryGeneratedColumn()
     id: string;
+    @Column()
+    name: string;
 
     @Column()
     email: string;
+    
+    @Column()
+    senha: string;
 
     @UpdateDateColumn()
     creatd_at: Date;

@@ -1,5 +1,6 @@
 body {
     background-color: dimgray;
+   
 }
 #center {
     align-items: center;
@@ -9,31 +10,40 @@ body {
     
 }
 .cadastro{
-    background-color: rgba(128, 128, 128, 0.938);
-   border: solid 2px black;
+    background-color: rgba(233, 205, 44, 0.938);
+   border: solid 1px black;
 }
 
 .login{
-    background-color: rgba(128, 128, 128, 0.938);
-    margin-top: 30px;
-    border: solid 2px black;
+    background-color: rgba(233, 205, 44, 0.938);
+    margin-top: 1px;
+    border: solid 1px black;
     
 }
 input {
-    background-color: rgba(135, 206, 250, 0.336);
+    background-color: greenyellow;
+    color: white;
 }
 button {
-    background-color: rgba(135, 206, 250, 0.336);   
+    background-color:greenyellow; 
+    margin-top: 4px;  
+}
+form {
+    border: solid 1px black;  
+}
+fieldset {
+    border: solid 1px black;  
 }
 h1 {
     text-align: center;
 }
 p {
     text-align: center;
+    font-size: 20px;
 }
 img {
 height: 150px;
-width: 150px;
+width: 140px;
 margin-top: 50px;
 margin-left: 20px;
 }
@@ -43,6 +53,10 @@ margin-left: 20px;
 }
 #articli {
 margin-top: -100px;
-margin-bottom: 50px;
+margin-bottom: -15px;
+}
+#main {
+    background-color: rgba(255, 255, 0, 0.541);
+    border: solid 1px black;
 }
    

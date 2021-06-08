@@ -9,7 +9,9 @@ const routes = Router();
 routes.get("/pages/blog", (request,response) => {
     return response.render("../views/index");
 });
-
+routes.post("/blog", (request,response) => {
+    return response.render("../views/blog");
+});
 routes.post('/users', usersController.create);
 
 

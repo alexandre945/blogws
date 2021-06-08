@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href= "/style.css" type="text/css" rel="stylesheet" />   
-   
-    <title>Bolg</title>
+    <link href="/style.css" type="text/css" rel="stylesheet" />
+
+    <title>Blog</title>
 </head>
 
 <body>
     <div id="center">
-        <div id="image"> 
-            <img src="/assets/images/teclado-em-close-up_1161-210.jpg" alt="logo">
-         
-        </div>  
-        <div id="articli">
-            <h1> New blog article </h1>
-            <p>Se-Cadastre aqui: O Blog do dev iniciante</p>
+        <div id="main">
+            <div id="image">
+                <img src="/assets/images/teclado-em-close-up_1161-210.jpg" alt="logo">
+            </div>
+            <div id="articli">
+                <h1>Sejá bem vindo ao Blog do dv iniciante: </h1>
+                <p>Cadastre-se aqui: O Blog do Dev iniciante</p>
+            </div>
         </div>
-     
         <div class="cadastro">
-            <form action="" id="form-cadastro" method="post">
+            <form action="./blog.ejs" id="form-cadastro" method="post">
                 <fieldset id="form">
                     <legend>CADASTRO</legend>
                     <legend>Name</legend>
@@ -31,7 +31,7 @@
                     <input type="text" name="email"> <br />
                     <legend>Password</legend>
                     <input type="password" name="senha"><br />
-                    <button type="submit" form="form-cadastro">SEND</button>
+                    <button type="submit" form="form-cadastro">CADASTRAR</button>
                 </fieldset>
             </form>
         </div>
@@ -45,14 +45,14 @@
                     <input type="email" name="email"> <br />
                     <legend>Password</legend>
                     <input type="password" name="senha"><br />
-                    <button type="submit" form="login">SEND</button>
+                    <button type="submit" form="login">LOGAR</button>
                 </fieldset>
             </form>
         </div>
-    
+
 
     </div>
-    
+
 </body>
 <!-- <script src="/socket.io/socket.io.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"></script>
