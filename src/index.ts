@@ -4,7 +4,7 @@ import {User} from "./entity/User";
 
 createConnection().then(async connection => {
 
-    console.log("Inserting a new user into the database...");
+    console.log("Inserting a new user into the database: userblog");
     const user = new User();
     user.name = "";
     user.email = "";
