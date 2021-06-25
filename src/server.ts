@@ -1,5 +1,7 @@
 
 import express from 'express';
+import "reflect-metadata";
+import { v4 as uuid } from "uuid";
 import { createServer } from "http";
 import { Server, Socket } from "socket.io";
 import path from "path";
@@ -22,6 +24,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // routes
 app.use(routes)
+app.use(express.json());
 
 const http = createServer(app);//criando protocolo http
 const io = new Server(http);//criando protocolo ws

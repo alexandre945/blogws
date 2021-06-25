@@ -1,10 +1,11 @@
 // import express from "express";
-import {request,Router} from  "express";
+import {request,response,Router} from  "express";
 import {Express} from 'express';
 import { UsersController } from "../controllers/UsersController";
-const usersController = new UsersController();
 import { createServer} from "http";
 const routes = Router();
+
+const usersController = new UsersController();
 
 routes.get("/pages/blog", (request,response) => {
     return response.render("../views/index");
@@ -12,7 +13,8 @@ routes.get("/pages/blog", (request,response) => {
 routes.post("/blog", (request,response) => {
     return response.render("../views/blog");
 });
-routes.post('/users', usersController.create);
+routes.post("/users", usersController.handle);
+
 
 
 

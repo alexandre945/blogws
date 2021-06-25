@@ -1,42 +1,36 @@
 import { getCustomRepository } from "typeorm";
 import { UsersRepository } from "../repositories/UsersRepository";
-
-
-
+interface IUuserRequest {
+  name: string,
+  email: string,
+  senha: string,
+}
 class UsersService {
-  private usersRepository: UsersRepository;
-
-  constructor() {
-    this.usersRepository = getCustomRepository(UsersRepository);
-  }
-
-  static findByEmail(email: any) {
-      throw new Error("Method not implemented.");
-     
-  }
-  async create(email:string) {
+  async execute({ name, email, senha }: IUuserRequest) {
     const usersRepository = getCustomRepository(UsersRepository);
-    
 
-    const userExists = await usersRepository.findOne({
-        email,
+    if (!email) {
+      throw new Error("Email incorreto");
+    }
+
+    const userAlreadyExists = await usersRepository.findOne({
+      email,
+    });
+
+    if (userAlreadyExists) {
+      throw new Error("usuario já existe");
+    }
+
+    const user = usersRepository.create({
+      name,
+      email,
+      senha,
+
     })
 
-    if(userExists) {
-        return userExists;
-    }
-    const user = usersRepository.create({
-        email
-    });
     await usersRepository.save(user);
+    return user;
 
-    return user;
-  }
-  async findByEmail(email: string) {
-    const usersRepository = getCustomRepository(UsersRepository);
-    const user = await usersRepository.findOne({ email });
-  
-    return user;
   }
 }
 

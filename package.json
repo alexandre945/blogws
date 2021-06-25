@@ -5,8 +5,8 @@
    "main": "server.ts",
    "scripts": {
       "dev": "ts-node-dev src/server.ts",
-      "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
-      "start": "ts-node src/index.ts"
+      "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+      "start": "ts-node database/index.ts"
    },
    "keywords": [],
    "author": "Alexandre",
@@ -22,6 +22,7 @@
       "typescript": "3.3.3333"
    },
    "dependencies": {
+      "@types/uuid": "^8.3.0",
       "client": "0.0.1",
       "ejs": "^3.1.6",
       "mysql": "^2.18.1",

@@ -1,6 +1,6 @@
-import {Entity, PrimaryGeneratedColumn, Column,UpdateDateColumn} from "typeorm";
-// import { v4 as uuid } from "uuid"
-@Entity()
+import {Entity, PrimaryGeneratedColumn, Column,UpdateDateColumn,CreateDateColumn} from "typeorm";
+//  import { v4 as uuid } from "uuid"
+@Entity("user")
  class User {
 
     @PrimaryGeneratedColumn()
@@ -14,8 +14,11 @@ import {Entity, PrimaryGeneratedColumn, Column,UpdateDateColumn} from "typeorm";
     @Column()
     senha: string;
 
-    @UpdateDateColumn()
+    @CreateDateColumn()
     creatd_at: Date;
+
+    @UpdateDateColumn()
+    updated_at: Date;
 
 
 }
